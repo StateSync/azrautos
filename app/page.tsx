@@ -231,8 +231,8 @@ export default function Home() {
           >
             {[
               { icon: Users, label: "2000+ Cities", value: "Nationwide", color: "trust" },
-              { icon: Award, label: "Expert Mechanics", value: "Certified", color: "premium" },
-              { icon: Shield, label: "Warranty", value: "12mo/12k mi", color: "success" },
+              { icon: Award, label: "Expert Mechanics", value: "Reliable", color: "premium" },
+              { icon: Shield, label: "Warranty", value: "6mo/6k mi", color: "success" },
               { icon: Star, label: "Rating", value: "5.0 Stars", color: "energy" },
             ].map((stat, index) => {
               const colors = getColorClasses(stat.color)
