@@ -289,6 +289,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+      
 
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
