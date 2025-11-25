@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { createConversionHandler, trackPhoneConversion, trackEmailConversion } from "@/lib/conversion-tracking";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -183,14 +184,12 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
             >
               <Button
-                asChild
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg"
+                onClick={() => trackPhoneConversion("4049429222")}
               >
-                <a href="tel:4049429222">
-                  <Phone className="w-4 h-4 mr-2" />
-                  (404) 942-9222
-                </a>
+                <Phone className="w-4 h-4 mr-2" />
+                (404) 942-9222
               </Button>
             </motion.div>
           </div>
@@ -215,14 +214,12 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
-                asChild
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-shadow"
+                onClick={() => trackPhoneConversion("4049429222")}
               >
-                <a href="tel:4049429222">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
-                </a>
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
               </Button>
               <Button
                 asChild
@@ -289,7 +286,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      
+
 
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
@@ -373,14 +370,12 @@ export default function Home() {
             className="text-center"
           >
             <Button
-              asChild
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg"
+              onClick={() => trackPhoneConversion("4049429222")}
             >
-              <a href="tel:4049429222">
-                <Phone className="w-4 h-4 mr-2" />
-                Call to Book Service
-              </a>
+              <Phone className="w-4 h-4 mr-2" />
+              Call to Book Service
             </Button>
           </motion.div>
         </div>
@@ -516,12 +511,12 @@ export default function Home() {
                     <Phone className="w-6 h-6 text-trust" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">Phone</h3>
-                  <a
-                    href="tel:4049429222"
-                    className="text-trust hover:underline font-medium"
+                  <button
+                    onClick={() => trackPhoneConversion("4049429222")}
+                    className="text-trust hover:underline font-medium bg-transparent border-none cursor-pointer"
                   >
                     (404) 942-9222
-                  </a>
+                  </button>
                 </CardContent>
               </Card>
 
@@ -531,12 +526,12 @@ export default function Home() {
                     <Mail className="w-6 h-6 text-premium" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">Email</h3>
-                  <a
-                    href="mailto:azrautorepair@gmail.com"
-                    className="text-premium hover:underline font-medium"
+                  <button
+                    onClick={() => trackEmailConversion("azrautorepair@gmail.com")}
+                    className="text-premium hover:underline font-medium bg-transparent border-none cursor-pointer"
                   >
                     azrautorepair@gmail.com
-                  </a>
+                  </button>
                 </CardContent>
               </Card>
 
@@ -557,14 +552,12 @@ export default function Home() {
             </div>
 
             <Button
-              asChild
               size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
+              onClick={() => trackPhoneConversion("4049429222")}
             >
-              <a href="tel:4049429222">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now for a Free Quote
-              </a>
+              <Phone className="w-5 h-5 mr-2" />
+              Call Now for a Free Quote
             </Button>
           </motion.div>
         </div>

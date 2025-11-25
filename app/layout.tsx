@@ -34,6 +34,27 @@ export default function RootLayout({
             gtag('config', 'AW-17079463054');
           `}
         </Script>
+        
+        {/* Google Ads Conversion Tracking */}
+        <Script id="google-ads-conversion" strategy="afterInteractive">
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                'send_to': 'AW-17079463054/eYh1CKvn3coaEI7Zj9A_',
+                'event_callback': callback
+              });
+              return false;
+            }
+            
+            // Make function available globally
+            window.gtag_report_conversion = gtag_report_conversion;
+          `}
+        </Script>
       </head>
       <body className={`font-sans antialiased`}>
         {children}
